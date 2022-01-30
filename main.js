@@ -10,5 +10,5 @@ img.addEventListener("load",()=>{
 });
 
 data.addEventListener("input",()=>{
-  img.src = `http://api.qrserver.com/v1/create-qr-code/?data=${data.value}&color=fff&bgcolor=505CE5`;
+  img.src = `http://api.qrserver.com/v1/create-qr-code/?data=${data.value}`;
 })

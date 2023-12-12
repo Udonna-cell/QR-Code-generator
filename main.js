@@ -10,5 +10,12 @@ img.addEventListener("load",()=>{
 });
 
 data.addEventListener("input",()=>{
-  img.src = `http://api.qrserver.com/v1/create-qr-code/?data=${data.value}`;
+  if (data.value == ""){
+    loading.style.display = "block";
+    img.style.display = "none";
+  }else {
+    loading.style.display = "none";
+    img.style.display = "inline"
+    img.src = `http://api.qrserver.com/v1/create-qr-code/?data=${data.value}`;
+  }
 })
